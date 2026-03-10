@@ -1,0 +1,10 @@
+[phases.build]
+cmds = [
+  "pip install -r requirements.txt"
+]
+
+[phases.setup]
+nixPkgs = ["libreoffice"]
+
+[start]
+cmd = "uvicorn contratos_api:app --host 0.0.0.0 --port $PORT"
